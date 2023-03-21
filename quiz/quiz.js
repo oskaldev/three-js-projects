@@ -137,7 +137,16 @@ const data = [
     ],
   },
   {
-    id: 1,
+    id: 3,
+    question: "A group of which animals is referred to as a wake?",
+    answers: [
+      { answer: "bats", isCorrect: false },
+      { answer: "vultures", isCorrect: true },
+      { answer: "ants", isCorrect: false },
+    ],
+  },
+  {
+    id: 4,
     question: "A group of which animals is referred to as a wake?",
     answers: [
       { answer: "bats", isCorrect: false },
@@ -160,8 +169,33 @@ let wrongCount = 0;
 let total = 0;
 let selectedAnswer;
 
+const playAgain = () => {
+  qIndex = 0;
+  correctCount = 0;
+  wrongCount = 0;
+  total = 0;
+  selectedAnswer;
+  showQuestion(0);
+};
+play.addEventListener("click", () => {
+  resultScreen.style.display = "none";
+  gameScreen.style.display = "block";
+  playAgain();
+})
+
+
+const showResult = () => {
+  resultScreen.style.display = "block";
+  gameScreen.style.display = "none";
+
+  resultScreen.querySelector(".correct").textContent = `Правильных ответов: ${correctCount}`;
+  resultScreen.querySelector(".wrong").textContent = `Не правильных ответов: ${wrongCount}`;
+  resultScreen.querySelector(".score").textContent = `Оценка: ${correctCount / qIndex * 100}`;
+}
 
 const showQuestion = (qNumber) => {
+  if (qIndex === data.length) return showResult();
+  selectedAnswer = null;
   question.textContent = data[ qNumber ].question
   answersContainer.innerHTML = data[ qNumber ].answers.map((item, index) =>
     ` <div class="answer">
@@ -181,6 +215,18 @@ const selectAnswer = () => {
   })
 }
 
+const submitAnswer = () => {
+  submit.addEventListener("click", () => {
+    if (selectedAnswer !== null) {
+      selectedAnswer === "true" ? correctCount++ : wrongCount++;
+      qIndex++;
+      showQuestion(qIndex);
+    } else {
+      alert("Пожалуйста выберите ответ")
+    }
+  });
+}
 
 showQuestion(qIndex);
+submitAnswer();
 
