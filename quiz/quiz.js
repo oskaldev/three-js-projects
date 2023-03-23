@@ -1,40 +1,40 @@
 const data = [
   {
     id: 1,
-    question: "Which of these fish is actually a fish?",
+    question: "Сколько будет 2+2 ?",
     answers: [
-      { answer: "swordfish", isCorrect: true },
-      { answer: "jellyfish", isCorrect: false },
-      { answer: "starfish", isCorrect: false },
-      { answer: "crayfish", isCorrect: false },
+      { answer: "4", isCorrect: true },
+      { answer: "2", isCorrect: false },
+      { answer: "1", isCorrect: false },
+      { answer: "3", isCorrect: false },
     ],
   },
   {
     id: 2,
-    question: "A flutter is a group of:",
+    question: "Сколько будет 5+1 ?",
     answers: [
-      { answer: "bees", isCorrect: false },
-      { answer: "penguins", isCorrect: false },
-      { answer: "butterflies", isCorrect: true },
-      { answer: "camels", isCorrect: false },
+      { answer: "1", isCorrect: false },
+      { answer: "2", isCorrect: false },
+      { answer: "6", isCorrect: true },
+      { answer: "7", isCorrect: false },
     ],
   },
   {
     id: 3,
-    question: "A group of which animals is referred to as a wake?",
+    question: "Сколько будет 2+8 ?",
     answers: [
-      { answer: "bats", isCorrect: false },
-      { answer: "vultures", isCorrect: true },
-      { answer: "ants", isCorrect: false },
+      { answer: "9", isCorrect: false },
+      { answer: "10", isCorrect: true },
+      { answer: "11", isCorrect: false },
     ],
   },
   {
     id: 4,
-    question: "A group of which animals is referred to as a wake?",
+    question: "Сколько будет 6+9 ?",
     answers: [
-      { answer: "bats", isCorrect: false },
-      { answer: "vultures", isCorrect: true },
-      { answer: "ants", isCorrect: false },
+      { answer: "20", isCorrect: false },
+      { answer: "15", isCorrect: true },
+      { answer: "16", isCorrect: false },
     ],
   },
 ];
