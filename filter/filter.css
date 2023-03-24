@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -11,26 +11,30 @@ body {
   flex: 1;
 }
 
-.search{
+.search {
   padding: 10px;
   width: 200px;
   border: 1px solid gray;
 }
 
-h1{
+h1 {
   font-size: 30px;
   color: #555;
   font-weight: 300;
 }
+h2 {
+  font-size: 25px;
+  color: #555;
+  font-weight: 300;
+}
 
-
-.cats{
+.cats {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.cat{
+.cat {
   cursor: pointer;
   font-size: 20px;
   font-weight: 300;
@@ -41,13 +45,13 @@ h1{
   flex: 4;
 }
 
-.products{
+.products {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.product{
+.product {
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -55,12 +59,13 @@ h1{
   align-items: center;
 }
 
-img{
+img {
   width: 150px;
   height: 250px;
   object-fit: contain;
 }
 
-.name{
+.name {
+  text-align: center;
   font-weight: 300;
 }
