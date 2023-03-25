@@ -174,8 +174,8 @@ const data = [
 ];
 
 const productsContainer = document.querySelector(".products");
-const searchContainer = document.querySelector(".search");
-const categoriesContainer = document.querySelector(".categories");
+const searchInput = document.querySelector(".search");
+const categoriesContainer = document.querySelector(".cats");
 const priceRange = document.querySelector(".priceRange");
 const price = document.querySelector(".priceValue");
 
@@ -191,3 +191,35 @@ const displayProducts = (filteredProducts) => {
   ).join('');
 }
 displayProducts(data);
+
+searchInput.addEventListener('keyup', (e) => {
+  const value = e.target.value.toLowerCase();
+
+  if (value) {
+    displayProducts(data.filter(item => item.name.toLowerCase().indexOf(value) !== -1))
+
+  } else {
+    displayProducts(data);
+  }
+});
+
+const setCategories = () => {
+  const allCats = data.map(item => item.cat)
+  const categories = ["Все", ...allCats.filter((item, index) => {
+    return allCats.indexOf(item) === index;
+  })];
+  categoriesContainer.innerHTML = categories.map(cat =>
+    `
+    <span class="cat">${cat}</span>
+    `
+  ).join('');
+
+
+  categoriesContainer.addEventListener('click', (e) => {
+    const selectedCategory = e.target.textContent;
+
+    selectedCategory === "Все" ? displayProducts(data) : displayProducts(data.filter(item => item.cat === selectedCategory))
+  })
+  
+}
+setCategories();
