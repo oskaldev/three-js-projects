@@ -10,16 +10,16 @@
 > 3 проекта - slider, quiz, filter
 
 ## Description
+Для каждого проекта сделана своя не большая документация в которой рассказывается, что за проект, из чего состоит и как работает:
+ - 📄 [filter](https://github.com/oskaldev/three-js-projects/tree/master/filter)
+ - 📄 [slider](https://github.com/oskaldev/three-js-projects/tree/master/slider)
+ - 📄 [quiz](https://github.com/oskaldev/three-js-projects/tree/master/quiz)
 
-🏠 [Homepage](#)
 ## Install
 from Github
 ```Github
 git clone https://github.com/oskaldev/three-js-projects.git
 ```
-## Usage
-
-
 ## Author
 
 👤 **oskaldev**
@@ -27,5 +27,6 @@ git clone https://github.com/oskaldev/three-js-projects.git
 * Github: [@oskaldev](https://github.com/oskaldev)
 * LinkedIn: [@oskaldev](https://linkedin.com/in/oskaldev)
 * Telegram: [@oskaldev](https://t.me/oskaldev)
+
 
 
