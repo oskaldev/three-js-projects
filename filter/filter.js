@@ -177,7 +177,7 @@ const productsContainer = document.querySelector(".products");
 const searchInput = document.querySelector(".search");
 const categoriesContainer = document.querySelector(".cats");
 const priceRange = document.querySelector(".priceRange");
-const price = document.querySelector(".priceValue");
+const priceValue = document.querySelector(".priceValue");
 
 const displayProducts = (filteredProducts) => {
   productsContainer.innerHTML = filteredProducts.map((product) =>
@@ -220,6 +220,23 @@ const setCategories = () => {
 
     selectedCategory === "Все" ? displayProducts(data) : displayProducts(data.filter(item => item.cat === selectedCategory))
   })
-  
 }
+
+const setPrices = () => {
+  const priceList = data.map(item => item.price);
+  const minPrice = Math.min(...priceList);
+  const maxPrice = Math.max(...priceList);
+
+  priceRange.min = minPrice;
+  priceRange.max = maxPrice;
+  priceRange.value = minPrice;
+  priceValue.textContent = minPrice + "Р";
+
+  priceRange.addEventListener("input", (e) => {
+    priceValue.textContent = e.target.value + "Р";
+    displayProducts(data.filter(item => item.price <= e.target.value));
+  })
+}
+
 setCategories();
+setPrices();
