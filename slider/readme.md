@@ -7,7 +7,6 @@
 </p>
 
 **slider** - страница выводящая слайдер.
-> сделал слайдер на Js
 
 ## Install
 from Github
@@ -24,6 +23,7 @@ git clone https://github.com/oskaldev/three-js-projects/tree/master/slider.git
 
 <img src="https://user-images.githubusercontent.com/67880047/227737442-8790c63e-6fad-494f-a62c-ca4ed312270e.png" width=50% height=50%>
 
+Написан на нативном JS
 
 ## Author
 
